@@ -8,9 +8,11 @@ decrease_count = 0
 FOR i = 1 to number_of_assessments - 1
     IF marks[i] >= 0 AND marks[i-1] >= 0 THEN
         IF marks[i] > marks[i-1] THEN
-            increase_count = increase_count + 1
+    increase_count = increase_count + 1
         ELSE IF marks[i] < marks[i-1] THEN
-            decrease_count = decrease_count + 1
+    decrease_count = decrease_count + 1
+        ELSE
+    // Equal marks – no change to counters
         END IF
     END IF
 END FOR
@@ -24,4 +26,5 @@ ELSE
 END IF
 Display trend
 STOP
+
 
