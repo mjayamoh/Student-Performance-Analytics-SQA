@@ -15,12 +15,13 @@ FOR i = 1 to number_of_assessments - 1
     END IF
 END FOR
 
-IF increase_count > decrease_count THEN
+IF increase_count >= 2 AND increase_count > decrease_count THEN
     trend = "Improving Performance"
-ELSE IF decrease_count > increase_count THEN
+ELSE IF decrease_count >= 2 AND decrease_count > increase_count THEN
     trend = "Declining Performance"
 ELSE
     trend = "Consistent Performance"
 END IF
 Display trend
 STOP
+
